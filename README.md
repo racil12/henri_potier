@@ -1,16 +1,35 @@
-# henri_potier_app
+# Henri Potier
 
-A new Flutter application.
+Test Mobile à compléter - DevoTeam
 
-## Getting Started
+## Foncionnalités
 
-This project is a starting point for a Flutter application.
+* Visualiser la listes des livres
+* Rechercher un livre
+* Ajouter un livre au panier
+* Supprimer du panier  
+* Calculer la promotion la plus intéressante pour le client pour sa commande  
+* Stockage interne avec Hive (Secure NoSQL Database)
+* Images stockés dans la memoire cache
 
-A few resources to get you started if this is your first Flutter project:
+## Captures d'Écran
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img src="./screenshots/1.png" width="24%"> <img src="./screenshots/1.png" width="24%"> <img src="./screenshots/1.png" width="24%"> <img src="./screenshots/1.png" width="24%"> 
+<img src="./screenshots/1.png" width="24%"> <img src="./screenshots/1.png" width="24%"> <img src="./screenshots/1.png" width="24%"> <img src="./screenshots/1.png" width="24%"> 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Construire depuis la Source
+
+1. Si vous n'avez pas le SDK Flutter installé, merci de visiter le site officiel de [Flutter](https://flutter.dev/).
+2. Récupérez le code source de la branche master.
+
+```
+git clone https://github.com/racil12/henri_potier.git
+```
+
+3. Lancez l'application avec Android Studio ou VS Code. Ou dans la ligne de commandes:
+
+```
+flutter pub get
+flutter run
+```
