@@ -39,14 +39,6 @@ class _HomePageState extends State<HomePage> {
     fetchBooks();
   }
 
-  /*fetchOffers() {
-    if (orders.isNotEmpty) {
-      offerController.getOffers(orders).then((list) {
-        print(list);
-      });
-    }
-  }*/
-
   fetchOrders() {
     List<Order> _orders = [];
     List<dynamic> list = Hive.box('cart').values.toList();
@@ -283,9 +275,9 @@ class _HomePageState extends State<HomePage> {
       sliceReduction
     ].reduce((a, b) => a.result < b.result ? a : b);
 
-    /*print(
+    /*logger.i(
         "reductions :${[percentageReduction, minusReduction, sliceReduction]}");
-    print("bestReduction :$bestReduction");*/
+    logger.i("bestReduction :$bestReduction");*/
     return bestReduction;
   }
 

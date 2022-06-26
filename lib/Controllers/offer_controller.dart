@@ -22,7 +22,7 @@ class OfferController {
       }
       return offers;
     } else {
-      print("something went wrong");
+      logger.d("something went wrong");
       return null;
     }
   }

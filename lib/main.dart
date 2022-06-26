@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:henri_potier_app/Views/home_page.dart';
+import 'package:henri_potier_app/config.dart';
 
 import 'package:hive_flutter/adapters.dart';
 import 'package:path_provider/path_provider.dart';
@@ -26,16 +27,15 @@ Future<void> openHiveBox(String boxName, {bool limit = false}) async {
       await dbFile.delete();
       await lockFile.delete();
       await Hive.openBox(boxName);
-      print("box open :" + boxName);
+      logger.i("box open :" + boxName);
       throw 'Failed to open $boxName Box\nError: $error';
     });
     // clear box if it grows large
     if (box.length > 500) {
       box.clear();
-      print("box clear :" + boxName);
+      logger.i("box clear :" + boxName);
     }
     await Hive.openBox(boxName);
-    print("box open after else :" + boxName);
   } else {
     await Hive.openBox(boxName).onError((error, stackTrace) async {
       final Directory dir = await getApplicationDocumentsDirectory();
@@ -45,7 +45,6 @@ Future<void> openHiveBox(String boxName, {bool limit = false}) async {
       await dbFile.delete();
       await lockFile.delete();
       await Hive.openBox(boxName);
-      print("dbfile and lockfile deleted and box open : :" + boxName);
       throw 'Failed to open $boxName Box\nError: $error';
     });
   }

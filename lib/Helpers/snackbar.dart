@@ -28,7 +28,7 @@ class ShowSnackBar {
         ),
       );
     } catch (e) {
-      print('Failed to show Snackbar with title:$title');
+      logger.e('Failed to show Snackbar with title:$title');
     }
   }
 }

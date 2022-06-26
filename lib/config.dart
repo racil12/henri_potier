@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:logger/logger.dart';
 
 String baseURL = "us-central1-dvt-henri-potier.cloudfunctions.net";
 
@@ -20,3 +21,9 @@ class Palette {
   static const Color backgroundColor = Color(0xffecebe7);
   static const Color cardColor = Color(0xff000029);
 }
+
+Logger logger = Logger(
+  filter: null,
+  printer: PrettyPrinter(),
+  output: null,
+);
