@@ -2,7 +2,7 @@
 
 Test Mobile à compléter - DevoTeam
 
-## Foncionnalités
+## Fonctionnalités
 
 * Visualiser la listes des livres
 * Rechercher un livre
